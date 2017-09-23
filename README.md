@@ -23,7 +23,7 @@ npm install --save fastify-apollo graphql
 ## Register plugin
 ```js
 fastify.register(require("fastify-apollo"), {
-    graphql: { schema },
+    graphql: { schema, rootValue },
     graphiql: true
 });
 ```
@@ -46,7 +46,7 @@ options.prefix = "/api"
 ### GraphQL
 Extends [GraphQLServerOptions](https://github.com/apollographql/apollo-server/blob/master/packages/apollo-server-core/src/graphqlOptions.ts#L4-L28) from Apollo.
 ```js
-options.graphql = { schema }
+options.graphql = { schema, rootValue }
 ```
 
 ### GraphiQL
